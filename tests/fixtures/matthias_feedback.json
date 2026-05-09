@@ -1,0 +1,98 @@
+{
+  "datei": "Kommentar -Krass, Digga!...- Max Mustermann.docx",
+  "schueler": "Max Mustermann",
+  "textsorte": "Kommentar",
+  "fach": "Deutsch",
+  "schulstufe": "Oberstufe",
+  "rubrik": "srdp_deutsch_oberstufe.md",
+  "bewertung": {
+    "inhalt": {
+      "stufe": "das Wesentliche zur Gaenze erfuellt",
+      "punkte": 3,
+      "gewicht": 30,
+      "staerken": [
+        "Der Ausgangstext wird korrekt aufgegriffen.",
+        "Ein eigener Standpunkt ist klar formuliert."
+      ],
+      "schwaechen": [
+        "Mehrere Argumente bleiben ohne starkes Beispiel.",
+        "Das Gegenargument wird nicht ganz ausformuliert entkraeftet."
+      ],
+      "vorschlaege": [
+        "Beispiele oder Beobachtungen konkreter angeben.",
+        "Das Gegenargument mit einer klaren Widerlegung abschliessen."
+      ]
+    },
+    "textstruktur": {
+      "stufe": "das Wesentliche zur Gaenze erfuellt",
+      "punkte": 3,
+      "gewicht": 25,
+      "staerken": [
+        "Die Gliederung in Einleitung, Hauptteil und Schluss ist klar.",
+        "Der Schluss rundet den Kommentar inhaltlich ab."
+      ],
+      "schwaechen": [
+        "Einzelne Uebergaenge sind abrupt.",
+        "Die Reihenfolge der Argumentation koennte stringenter sein."
+      ],
+      "vorschlaege": [
+        "Zwischen den Hauptabschnitten kurze Ueberleitungssaetze setzen.",
+        "Die Gegenposition spaeter und strategischer im Text platzieren."
+      ]
+    },
+    "ausdruck": {
+      "stufe": "ueber das Wesentliche hinausgehend erfuellt",
+      "punkte": 4,
+      "gewicht": 25,
+      "staerken": [
+        "Lebendiger, fuer den Kommentar passender Stil.",
+        "Mehrere stilistische Mittel werden bewusst eingesetzt."
+      ],
+      "schwaechen": [
+        "Einige Wortwiederholungen bei zentralen Begriffen.",
+        "Manche Schachtelsaetze wirken dicht."
+      ],
+      "vorschlaege": [
+        "Synonyme gezielter verteilen.",
+        "Zu lange Saetze an neuralgischen Stellen teilen."
+      ],
+      "rhetorische_figuren": [
+        "Rhetorische Frage in der Ueberschrift.",
+        "Ironische Zuspitzung im Hauptteil.",
+        "Hyperbel zur Verstaerkung der Wirkung."
+      ]
+    },
+    "sprachrichtigkeit": {
+      "stufe": "das Wesentliche zur Gaenze erfuellt",
+      "punkte": 3,
+      "gewicht": 20,
+      "staerken": [
+        "Trotz Fehlern insgesamt gut lesbar.",
+        "Mehrzahl der Saetze bleibt verstaendlich."
+      ],
+      "schwaechen": [
+        "Mehrere Probleme bei Adjektivdeklination und Verbformen.",
+        "Einige Tippfehler."
+      ],
+      "vorschlaege": [
+        "Adjektivendungen vor Abgabe systematisch kontrollieren.",
+        "Unregelmaessige Verbformen nochmals querpruefen."
+      ],
+      "fehler_detail": [
+        "Fehler: \"sprechsn\" -> Korrektur: \"sprechen\" (Kategorie: Rechtschreibung)",
+        "Fehler: \"aus dem Englischem\" -> Korrektur: \"aus dem Englischen\" (Kategorie: Grammatik)"
+      ],
+      "fehlerschwerpunkte": [
+        "Adjektivdeklination.",
+        "Verbkonjugation.",
+        "Fluechtigkeitsfehler."
+      ]
+    }
+  },
+  "notenempfehlung": {
+    "durchschnitt": 3.25,
+    "note": 3,
+    "bezeichnung": "Befriedigend",
+    "begruendung": "Der Kommentar ist im Ausdruck ueberdurchschnittlich gelungen und greift den Ausgangstext sicher auf. Inhaltlich und sprachlich bleiben jedoch genug Schwaechen, dass insgesamt eine solide, aber nicht schon gute Gesamtleistung vorliegt."
+  }
+}

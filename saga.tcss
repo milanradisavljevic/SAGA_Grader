@@ -1,0 +1,459 @@
+/* SAGA Dashboard – Textual CSS */
+
+Screen {
+    background: $surface;
+}
+
+/* Header – styling handled by SagaHeader.DEFAULT_CSS */
+
+/* Main 3-column layout */
+#main-container {
+    layout: horizontal;
+    height: 1fr;
+}
+
+/* Files panel (left, 25%) */
+#files-panel {
+    width: 25%;
+    height: 1fr;
+    border: solid $primary;
+    padding: 0;
+    margin: 0;
+}
+
+#files-panel:focus-within {
+    border: round #00ffaa;
+}
+
+#files-panel .panel-title {
+    text-style: bold;
+    background: $primary-darken-2;
+    color: $text;
+    padding: 0 1;
+    height: 1;
+}
+
+#search-input {
+    margin: 0 1;
+    height: 3;
+}
+
+#file-list {
+    height: 1fr;
+    margin: 0;
+    padding: 0;
+}
+
+#file-counter {
+    height: auto;
+    padding: 0 1;
+    color: $text-muted;
+    background: $surface-darken-1;
+}
+
+#add-file-btn {
+    margin: 0 1;
+    height: 3;
+}
+
+#class-select {
+    margin: 0 1;
+    height: 3;
+}
+
+#aufgabe-select {
+    margin: 0 1;
+    height: 3;
+}
+
+.add-class-btn {
+    margin: 0 1 0 1;
+    height: 3;
+}
+
+#action-row-aufgabe {
+    height: 3;
+    margin: 0 1;
+    padding: 0;
+}
+
+.action-row-btn {
+    width: 1fr;
+    height: 3;
+    margin: 0;
+}
+
+#output-list {
+    height: 1fr;
+    margin: 0;
+    padding: 0;
+}
+
+#output-list > ListItem {
+    padding: 0 1;
+    height: 1;
+}
+
+/* Middle panel (40%) */
+#middle-panel {
+    width: 40%;
+    height: 1fr;
+    border: solid $primary;
+    padding: 0;
+    margin: 0;
+}
+
+#middle-panel:focus-within {
+    border: round #00ffaa;
+}
+
+#middle-panel .panel-title {
+    text-style: bold;
+    background: $primary-darken-2;
+    color: $text;
+    padding: 0 1;
+    height: 1;
+}
+
+#middle-scroll {
+    height: 1fr;
+    overflow-y: auto;
+}
+
+#middle-content {
+    padding: 0 1;
+}
+
+/* Action bar – Buttons im Middle Panel */
+#action-bar {
+    height: auto;
+    padding: 0 1 1 1;
+    background: $surface-darken-1;
+    border-top: solid $primary-darken-2;
+}
+
+.action-btn {
+    width: 1fr;
+    height: 3;
+    margin-top: 1;
+}
+
+.action-btn:hover {
+    text-style: bold;
+}
+
+.assignment-field {
+    height: 3;
+    margin: 0;
+}
+
+/* Preview panel (right, 35%) */
+#preview-panel {
+    width: 35%;
+    height: 1fr;
+    border: solid $primary;
+    padding: 0;
+    margin: 0;
+    overflow-y: auto;
+}
+
+#preview-panel:focus-within {
+    border: round #00ffaa;
+}
+
+#preview-panel .panel-title {
+    text-style: bold;
+    background: $primary-darken-2;
+    color: $text;
+    padding: 0 1;
+    height: 1;
+}
+
+#preview-content {
+    padding: 0 1;
+    height: 1fr;
+    overflow-y: auto;
+}
+
+/* Status indicators */
+.status-done {
+    color: $success;
+}
+
+.status-analyzed {
+    color: $warning;
+}
+
+.status-progress {
+    color: $accent;
+}
+
+.status-pending {
+    color: $text-muted;
+}
+
+.status-error {
+    color: $error;
+}
+
+/* File list items */
+.file-item {
+    padding: 0 1;
+    height: 1;
+}
+
+.file-item.selected {
+    background: $primary-darken-1;
+    text-style: bold;
+}
+
+.file-item.marked {
+    background: $primary-darken-2;
+}
+
+/* Criteria bar */
+.criteria-panel {
+    border: solid $primary;
+    margin: 1 0;
+    padding: 1;
+}
+
+.criterion-row {
+    height: 1;
+    padding: 0 1;
+}
+
+/* Review modal */
+ReviewScreen {
+    align: center middle;
+}
+
+.review-container {
+    width: 90%;
+    height: 85%;
+    background: $surface;
+    border: thick $primary;
+    padding: 1 2;
+    overflow-y: auto;
+}
+
+.review-note {
+    text-style: bold;
+    margin-bottom: 1;
+}
+
+.criterion-box {
+    border: solid $primary;
+    margin: 1 0;
+    padding: 0 1;
+}
+
+.criterion-header {
+    text-style: bold;
+    background: $primary-darken-2;
+    color: $text;
+    padding: 0 1;
+    height: 1;
+}
+
+.criterion-body {
+    padding: 0 1;
+}
+
+/* Progress modal */
+ProgressScreen {
+    align: center middle;
+}
+
+.progress-container {
+    width: 70%;
+    height: auto;
+    background: $surface;
+    border: thick $primary;
+    padding: 1 2;
+}
+
+/* Settings modal */
+SettingsScreen {
+    align: center middle;
+    height: 100%;
+}
+
+.settings-container {
+    width: 90%;
+    height: 92%;
+    background: $surface;
+    border: thick $primary;
+    padding: 1 2;
+    overflow-y: auto;
+}
+
+.settings-section {
+    border: solid $primary;
+    margin: 1 0;
+    padding: 1;
+    height: auto;
+}
+
+.settings-section-title {
+    text-style: bold;
+    background: $primary-darken-2;
+    color: $text;
+    padding: 0 1;
+    height: 1;
+}
+
+.settings-row {
+    height: 1;
+    padding: 0 1;
+}
+
+/* Help modal */
+HelpScreen {
+    align: center middle;
+}
+
+.help-container {
+    width: 70%;
+    height: auto;
+    max-height: 80%;
+    background: $surface;
+    border: thick $primary;
+    padding: 1 2;
+    overflow-y: auto;
+}
+
+/* Statistics modal */
+StatisticsScreen {
+    align: center middle;
+}
+
+.stats-container {
+    width: 80%;
+    height: auto;
+    max-height: 88%;
+    background: $surface;
+    border: thick $primary;
+    padding: 1 2;
+    overflow-y: auto;
+}
+
+.stats-buttons {
+    margin-top: 1;
+    height: auto;
+}
+
+.stats-buttons Button {
+    margin-right: 1;
+}
+
+/* Confirm modal */
+ConfirmScreen {
+    align: center middle;
+}
+
+.confirm-container {
+    width: 60%;
+    height: auto;
+    background: $surface;
+    border: thick $warning;
+    padding: 1 2;
+}
+
+/* API setup modal */
+ApiSetupScreen {
+    align: center middle;
+}
+
+.api-setup-container {
+    width: 70%;
+    height: auto;
+    max-height: 80%;
+    background: $surface;
+    border: thick $warning;
+    padding: 1 2;
+    overflow-y: auto;
+}
+
+/* Strengths, weaknesses, suggestions */
+.strength {
+    color: $success;
+}
+
+.weakness {
+    color: $error;
+}
+
+.suggestion {
+    color: $accent;
+}
+
+/* Panel focus highlight */
+.panel-focused {
+    border: solid #00e0e0;
+}
+
+.panel-focused .panel-title {
+    background: #004444;
+    color: #00e0e0;
+}
+
+/* Panel focus-within glow effect */
+#files-panel:focus-within .panel-title,
+#middle-panel:focus-within .panel-title,
+#preview-panel:focus-within .panel-title {
+    background: #004444;
+    color: #00ffaa;
+}
+
+/* Native ListView highlight (replaces manual .selected class) */
+ListView > ListItem.--highlight {
+    background: $primary-darken-1;
+    text-style: bold;
+}
+
+ListView > ListItem:hover {
+    background: $primary-darken-2;
+}
+
+/* Preview tab bar */
+#preview-tabs {
+    height: 3;
+    padding: 0;
+    background: $surface-darken-1;
+}
+
+.tab-btn {
+    width: 1fr;
+    height: 3;
+    background: $surface-darken-1;
+    color: $text-muted;
+    border: none;
+    text-style: none;
+}
+
+.tab-btn:hover {
+    background: $primary-darken-2;
+    color: $text;
+}
+
+.tab-btn.tab-active {
+    background: $primary-darken-1;
+    color: $text;
+    text-style: bold;
+}
+
+/* Footer */
+Footer {
+    background: $primary-darken-3;
+    color: $text;
+}
+
+Footer .footer--key {
+    text-style: bold;
+    color: #00e0e0;
+}
+
+Footer .footer--description {
+    color: $text;
+}

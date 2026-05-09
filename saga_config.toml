@@ -1,0 +1,64 @@
+[project]
+name = "SAGA"
+description = "Schularbeits-Analyse mit Generativer AI – Automatisierte Korrektur-Unterstützung für Lehrkräfte"
+
+[agent]
+default = "claude"
+timeout_seconds = 300
+
+[agent.commands]
+claude = "claude --print"
+codex = "codex exec"
+qwen = "qwen -p"
+glm = "glm"
+
+[api]
+enabled = true
+# Provider: anthropic | glm | kimi | openai | ollama
+provider = "kimi"
+model = "moonshot-v1-32k"
+
+[paths]
+input = "input"
+output = "output"
+rubrics = "rubrics"
+feedback_data = "output/feedback_data"
+schema = "feedback_schema.json"
+fehlerlog = "output/fehlerlog.txt"
+
+[defaults]
+fach = "Deutsch"
+schulstufe = "Unterstufe"
+
+[rubric_mapping]
+"Deutsch+Oberstufe" = "srdp_deutsch_oberstufe.md"
+"Deutsch+Unterstufe" = "deutsch_unterstufe.md"
+"Englisch+Unterstufe" = "englisch_a2.md"
+"Englisch+Oberstufe" = "srdp_englisch_b2.md"
+
+[docx]
+teacher_name = ""
+school_name = ""
+logo_path = ""
+
+[classes]
+active = "3b"
+
+[classes.Standard]
+input = "input"
+output = "output"
+active_aufgabe = "Select.NULL"
+
+[classes.3b]
+active_aufgabe = "Jugendsprache_Kommentar"
+input = "input/3b"
+output = "output/3b"
+
+[classes.3b.aufgaben.Jugendsprache_Kommentar]
+label = "Jugendsprache Kommentar"
+fach = "Deutsch"
+schulstufe = "Unterstufe"
+textsorte = "Kommentar"
+rubric = "deutsch_unterstufe.md"
+input = "input/3b/Jugendsprache_Kommentar"
+output = "output/3b/Jugendsprache_Kommentar"

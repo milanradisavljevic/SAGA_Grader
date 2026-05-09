@@ -1,0 +1,151 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "SAGA Feedback Data",
+  "type": "object",
+  "required": [
+    "datei",
+    "textsorte",
+    "fach",
+    "schulstufe",
+    "rubrik",
+    "bewertung",
+    "notenempfehlung"
+  ],
+  "properties": {
+    "datei": {
+      "type": "string",
+      "description": "Originale DOCX-Datei aus /input/."
+    },
+    "schueler": {
+      "type": "string"
+    },
+    "klasse": {
+      "type": "string"
+    },
+    "textsorte": {
+      "type": "string"
+    },
+    "fach": {
+      "type": "string",
+      "enum": [
+        "Deutsch",
+        "Englisch"
+      ]
+    },
+    "schulstufe": {
+      "type": "string",
+      "enum": [
+        "Unterstufe",
+        "Oberstufe"
+      ]
+    },
+    "rubrik": {
+      "type": "string"
+    },
+    "hinweise": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "bewertung": {
+      "type": "object",
+      "minProperties": 1,
+      "additionalProperties": {
+        "$ref": "#/$defs/kriterium"
+      }
+    },
+    "notenempfehlung": {
+      "$ref": "#/$defs/notenempfehlung"
+    }
+  },
+  "$defs": {
+    "kriterium": {
+      "type": "object",
+      "required": [
+        "stufe",
+        "punkte",
+        "staerken",
+        "schwaechen",
+        "vorschlaege"
+      ],
+      "properties": {
+        "stufe": {
+          "type": [
+            "string",
+            "number"
+          ]
+        },
+        "punkte": {
+          "type": "number"
+        },
+        "gewicht": {
+          "type": "number"
+        },
+        "staerken": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "schwaechen": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "vorschlaege": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "fehler_detail": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "fehlerschwerpunkte": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "rhetorische_figuren": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      },
+      "additionalProperties": false
+    },
+    "notenempfehlung": {
+      "type": "object",
+      "required": [
+        "durchschnitt",
+        "note",
+        "bezeichnung",
+        "begruendung"
+      ],
+      "properties": {
+        "durchschnitt": {
+          "type": "number"
+        },
+        "note": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 5
+        },
+        "bezeichnung": {
+          "type": "string"
+        },
+        "begruendung": {
+          "type": "string"
+        }
+      },
+      "additionalProperties": false
+    }
+  }
+}

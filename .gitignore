@@ -1,0 +1,42 @@
+# 🔴 API-Keys und Secrets – NIEMALS committen!
+.env
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+.venv/
+.pytest_cache/
+.ruff_cache/
+*.egg-info/
+dist/
+build/
+
+# Schülerdaten – NIEMALS committen! (Datenschutz / DSGVO)
+input/
+
+# Output-Daten (generierte Feedback-Dokumente)
+output/
+
+# Agent-Konfigurationen (persönlich)
+.claude/
+.qwen/
+
+# Backup-Dateien
+*.save
+*.save.*
+
+# OS-Artifakte
+*:Zone.Identifier
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# SAGA Laufzeit-Marker
+.saga_first_run_done

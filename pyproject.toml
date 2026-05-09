@@ -1,0 +1,52 @@
+[build-system]
+requires = ["setuptools>=70", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "saga"
+version = "0.7.0"
+description = "Schularbeits-Analyse mit Generativer AI – Automatisierte Korrektur-Unterstützung für Lehrkräfte"
+requires-python = ">=3.11"
+license = "MIT"
+
+dependencies = [
+    "textual>=0.47",
+    "python-docx>=1.1",
+    "anthropic>=0.30",
+    "openai>=1.30",
+    "tomlkit>=0.13",
+    "rich>=13",
+    "InquirerPy>=0.3",
+    "jsonschema>=4.20",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7",
+    "ruff>=0.4",
+]
+
+[project.scripts]
+saga = "saga:main"
+saga-wizard = "saga_wizard:main"
+
+[tool.setuptools]
+py-modules = [
+    "saga",
+    "saga_core",
+    "saga_wizard",
+    "generate_feedback",
+]
+
+[tool.setuptools.package-data]
+"*" = ["*.tcss", "*.toml", "*.json", "*.md"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "I"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

@@ -1,0 +1,84 @@
+{
+  "datei": "beispiel_globalisation.docx",
+  "schueler": "Emma Beispiel",
+  "klasse": "7a",
+  "textsorte": "Essay",
+  "fach": "Englisch",
+  "schulstufe": "Oberstufe",
+  "rubrik": "srdp_englisch_b2.md",
+  "hinweise": [
+    "B2-Schularbeit mit vier gleich gewichteten Kriterien."
+  ],
+  "bewertung": {
+    "task_achievement": {
+      "stufe": "8",
+      "punkte": 8,
+      "gewicht": 25,
+      "staerken": [
+        "All task points are addressed.",
+        "The essay keeps a clear argumentative focus."
+      ],
+      "schwaechen": [
+        "One counterargument could be developed more fully."
+      ],
+      "vorschlaege": [
+        "Add one more concrete example to strengthen the rebuttal."
+      ]
+    },
+    "organisation_layout": {
+      "stufe": "8",
+      "punkte": 8,
+      "gewicht": 25,
+      "staerken": [
+        "Clear paragraphing and logical progression.",
+        "The conclusion follows naturally from the argument."
+      ],
+      "schwaechen": [
+        "Some linking phrases are repeated."
+      ],
+      "vorschlaege": [
+        "Vary transitions to avoid formulaic sequencing."
+      ]
+    },
+    "lexical_range_accuracy": {
+      "stufe": "7",
+      "punkte": 7,
+      "gewicht": 25,
+      "staerken": [
+        "Appropriate vocabulary for an academic school essay.",
+        "Mostly precise wording."
+      ],
+      "schwaechen": [
+        "A few repeated high-frequency verbs."
+      ],
+      "vorschlaege": [
+        "Use more specific verbs in analytical passages."
+      ]
+    },
+    "grammatical_range_accuracy": {
+      "stufe": "7",
+      "punkte": 7,
+      "gewicht": 25,
+      "staerken": [
+        "Sentence structure is mostly controlled.",
+        "Complex clauses are attempted successfully."
+      ],
+      "schwaechen": [
+        "Occasional article and preposition slips."
+      ],
+      "vorschlaege": [
+        "Proofread article usage in abstract noun phrases."
+      ],
+      "fehler_detail": [
+        "Error: \"discuss about\" -> Correction: \"discuss\"",
+        "Error: \"the globalisation\" -> Correction: \"globalisation\" in the general sense"
+      ]
+    }
+  },
+  "notenempfehlung": {
+    "durchschnitt": 7.5,
+    "note": 2,
+    "bezeichnung": "Gut",
+    "begruendung": "The essay fulfils the task clearly and is well organised. Vocabulary and grammar are mostly secure, with only a few noticeable inaccuracies, so the overall performance is good."
+  }
+}

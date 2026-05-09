@@ -1,0 +1,99 @@
+{
+  "datei": "deutsch digga.docx",
+  "schueler": "Anna Muster",
+  "klasse": "6a",
+  "textsorte": "Eroerterung",
+  "fach": "Deutsch",
+  "schulstufe": "Oberstufe",
+  "rubrik": "srdp_deutsch_oberstufe.md",
+  "hinweise": [
+    "Ein Text, daher Bewertung ueber K1 und K3 der Schularbeitenlogik."
+  ],
+  "bewertung": {
+    "inhalt": {
+      "stufe": "das Wesentliche ueberwiegend erfuellt",
+      "punkte": 2,
+      "gewicht": 25,
+      "staerken": [
+        "Klare Hauptthese zum Einfluss von Influencern ist erkennbar.",
+        "Mehrere thematische Aspekte werden zumindest angesprochen."
+      ],
+      "schwaechen": [
+        "Keine tragfaehige Pro-/Contra-Struktur.",
+        "Der Ausgangstext wird nur knapp aufgegriffen."
+      ],
+      "vorschlaege": [
+        "Artikel in zwei bis drei Saetzen knapp zusammenfassen.",
+        "Argumente konsequent nach dem 3B-Schema ausbauen."
+      ]
+    },
+    "textstruktur": {
+      "stufe": "das Wesentliche zur Gaenze erfuellt",
+      "punkte": 3,
+      "gewicht": 25,
+      "staerken": [
+        "Einleitung, Hauptteil und Schluss sind erkennbar.",
+        "Der Schluss nimmt die Hauptthese wieder auf."
+      ],
+      "schwaechen": [
+        "Ueberleitungen zwischen den Abschnitten fehlen weitgehend.",
+        "Ein Absatz bleibt als Einzelsatz unterentwickelt."
+      ],
+      "vorschlaege": [
+        "Abschnittsverknuepfungen mit Konnektoren sichtbar machen.",
+        "Jeden Absatz als vollwertigen Gedankenschritt ausformulieren."
+      ]
+    },
+    "ausdruck": {
+      "stufe": "das Wesentliche zur Gaenze erfuellt",
+      "punkte": 3,
+      "gewicht": 25,
+      "staerken": [
+        "Grundsaetzlich verstaendlicher Stil.",
+        "Am Schluss etwas variablere Formulierungen."
+      ],
+      "schwaechen": [
+        "Mehrere deutliche Wortwiederholungen.",
+        "Satzbau ist ueberwiegend einfach."
+      ],
+      "vorschlaege": [
+        "Synonyme gezielter einsetzen.",
+        "Einzelne Saetze durch Nebensaetze und Relativsaetze variieren."
+      ],
+      "rhetorische_figuren": [
+        "Keine gezielten rhetorischen Figuren erkennbar."
+      ]
+    },
+    "sprachrichtigkeit": {
+      "stufe": "das Wesentliche zur Gaenze erfuellt",
+      "punkte": 3,
+      "gewicht": 25,
+      "staerken": [
+        "Insgesamt noch gut lesbar.",
+        "Nur wenige Einzelprobleme auf Satzebene."
+      ],
+      "schwaechen": [
+        "Einzelne Grammatik- und Zeichensetzungsfehler.",
+        "Unsicherheit bei Zusammenschreibung."
+      ],
+      "vorschlaege": [
+        "Vor Abgabe offene Satzschluesse kontrollieren.",
+        "Komposita gezielt auf Bindestrich oder Zusammenschreibung pruefen."
+      ],
+      "fehler_detail": [
+        "Fehler: \"Online Erziehung\" -> Korrektur: \"Online-Erziehung\" (Kategorie: Rechtschreibung)",
+        "Fehler: fehlender Punkt am Textende -> Korrektur: Punkt ergaenzen (Kategorie: Zeichensetzung)"
+      ],
+      "fehlerschwerpunkte": [
+        "Einzelne Rechtschreibprobleme bei Komposita.",
+        "Fluechtigkeitsfehler in der Zeichensetzung."
+      ]
+    }
+  },
+  "notenempfehlung": {
+    "durchschnitt": 2.75,
+    "note": 3,
+    "bezeichnung": "Befriedigend",
+    "begruendung": "Die Arbeit zeigt ein grundlegendes Themenverstaendnis und einen erkennbaren Aufbau. Fuer eine staerkere Bewertung fehlen jedoch eine tragfaehige Argumentationsstruktur, differenzierter Ausdruck und mehr sprachliche Sorgfalt."
+  }
+}
