@@ -56,7 +56,7 @@ Student .docx  →  Subject/Rubric Selection  →  LLM Analysis
 
 ## Screenshots
 
-![SAGA Dashboard](docs/screenshots/Screenshot%202026-04-11%20123150.png)
+
 
 ---
 
