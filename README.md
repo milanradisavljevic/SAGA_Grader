@@ -57,6 +57,8 @@ Student .docx  →  Subject/Rubric Selection  →  LLM Analysis
 ## Screenshots
 
 <img width="1682" height="1087" alt="image" src="https://github.com/user-attachments/assets/2a67ab3a-29ef-43bc-aa2a-a1dc0963bfe9" />
+
+
 <img width="1524" height="673" alt="image" src="https://github.com/user-attachments/assets/b19316be-bb8e-463a-b0fb-de1cb66997a7" />
 
 
