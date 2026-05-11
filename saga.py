@@ -113,48 +113,77 @@ def safe_id(prefix: str, raw: str) -> str:
 # Logo constants for SAGA TUI v8
 # =============================================================================
 
+# S fixed: correct S-curve shape (was identical to A before)
 LOGO_FULL = r"""
-██████╗  █████╗  ██████╗  █████╗ 
-██╔══██╗██╔══██╗██╔════╝ ██╔══██╗
-███████║███████║██║  ███╗███████║
-██╔══██║██╔══██║██║   ██║██╔══██║
-██║  ██║██║  ██║╚██████╔╝██║  ██║
-╚═╝  ╚═╝╚═╝  ╚═╝ ╚═════╝ ╚═╝  ╚═╝
+ ██████╗   █████╗   ██████╗   █████╗
+██╔════╝  ██╔══██╗ ██╔════╝  ██╔══██╗
+╚█████╗   ███████║ ██║  ███╗ ███████║
+ ╚════██╗ ██╔══██║ ██║   ██║ ██╔══██║
+ ██████╔╝ ██║  ██║ ╚██████╔╝ ██║  ██║
+ ╚═════╝  ╚═╝  ╚═╝  ╚═════╝  ╚═╝  ╚═╝
 """
 
 LOGO_COMPACT = r"""
-▒█░▒█ ░█▀▀█ ▒█▀▀▀█ ░█▀▀█
-▒█▀▀█ ▒█▄▄█ ░▀▀▀▄▄ ▒█▄▄█
-▒█░▒█ ▒█░▒█ ▒█▄▄▄█ ▒█░▒█
+╔═╗ ╔═╗ ╔═╗ ╔═╗
+╚═╗ ╠═╣ ║ ╗ ╠═╣
+╚═╝ ╩ ╩ ╚═╝ ╩ ╩
+S   A   G   A
 """
+
+# Diagonal gradient: vivid purple → electric blue → bright cyan → mint
+_GRADIENT_STOPS: list[tuple[float, tuple[int, int, int]]] = [
+    (0.00, (180,  80, 255)),
+    (0.33, ( 50, 130, 255)),
+    (0.66, (  0, 210, 255)),
+    (1.00, (  0, 255, 180)),
+]
+
+
+def _lerp_color(t: float) -> str:
+    for i in range(len(_GRADIENT_STOPS) - 1):
+        t0, c0 = _GRADIENT_STOPS[i]
+        t1, c1 = _GRADIENT_STOPS[i + 1]
+        if t <= t1:
+            f = (t - t0) / (t1 - t0)
+            return "#{:02x}{:02x}{:02x}".format(
+                int(c0[0] + f * (c1[0] - c0[0])),
+                int(c0[1] + f * (c1[1] - c0[1])),
+                int(c0[2] + f * (c1[2] - c0[2])),
+            )
+    r, g, b = _GRADIENT_STOPS[-1][1]
+    return f"#{r:02x}{g:02x}{b:02x}"
 
 
 def render_logo_gradient(width: int = 120) -> Text:
-    """Render SAGA logo with vertical gradient coloring."""
+    """Render SAGA logo with per-character diagonal gradient."""
     logo = LOGO_FULL if width >= 100 else LOGO_COMPACT
     lines = logo.strip("\n").split("\n")
-    colors = ["#ff00ff", "#cc44ff", "#8888ff", "#00aaff", "#00ddff", "#00ffaa"]
+    max_len = max(len(line) for line in lines)
+    num_lines = max(len(lines) - 1, 1)
 
     result = Text()
-    for line, color in zip(lines, colors):
-        result.append(line + "\n", style=f"bold {color}")
+    for li, line in enumerate(lines):
+        for ci, char in enumerate(line):
+            t = min(0.75 * (ci / max(max_len - 1, 1)) + 0.25 * (li / num_lines), 1.0)
+            result.append(char, style=f"bold {_lerp_color(t)}")
+        result.append("\n")
     return result
 
 
 def render_acronym() -> Text:
-    """Render SAGA acronym with highlighted initial letters."""
+    """Render SAGA acronym with gradient-matched initial letters."""
     parts = [
-        ("S", "chularbeits-"),
-        ("A", "nalyse mit"),
-        ("G", "enerativer"),
-        ("A", "I"),
+        ("S", "chularbeits-", 0.0),
+        ("A", "nalyse mit",   0.33),
+        ("G", "enerativer",   0.66),
+        ("A", "I",            1.0),
     ]
     result = Text()
-    for i, (letter, rest) in enumerate(parts):
-        result.append(letter, style="bold #00ddff")
+    for i, (letter, rest, t) in enumerate(parts):
+        result.append(letter, style=f"bold {_lerp_color(t)}")
         result.append(rest, style="dim white")
         if i < len(parts) - 1:
-            result.append("  ", style="dim white")
+            result.append("  ·  ", style="dim #444466")
     return result
 
 
